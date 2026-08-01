@@ -1,0 +1,44 @@
+# JARVIS AI - Python dependencies
+# Created and maintained by ZAID BILAL
+#
+# Core dependencies are required. Everything under "Optional" degrades
+# gracefully at runtime if not installed (the assistant logs a warning and
+# falls back to a safe no-op / console mode) so you can install only what
+# you need for your platform.
+
+# ---- Core (required) ----
+psutil>=5.9              # CPU/RAM stats
+
+# ---- GUI ----
+PySide6>=6.6              # Desktop UI (falls back to console mode if absent)
+
+# ---- Speech recognition (offline) ----
+vosk>=0.3.45               # Offline speech-to-text engine
+sounddevice>=0.4.6         # Microphone audio capture for Vosk
+# openai-whisper>=20231117 # Optional: heavier, more accurate STT alternative
+
+# ---- Wake word ----
+openwakeword>=0.6.0        # Offline, free wake-word detection
+# pvporcupine>=3.0         # Optional: Picovoice Porcupine (requires access key)
+
+# ---- Text to speech (offline) ----
+pyttsx3>=2.90              # Offline TTS via SAPI5 / NSSpeech / espeak
+
+# ---- Desktop automation ----
+pyautogui>=0.9.54          # Keyboard/mouse control, screenshots
+pygetwindow>=0.0.9         # Window management (Windows-focused)
+pyperclip>=1.8.2           # Clipboard access
+
+# ---- System control (Windows) ----
+pycaw>=20230407            # Volume control
+comtypes>=1.2.0            # Required by pycaw
+screen-brightness-control>=0.16  # Brightness control (driver-dependent)
+
+# ---- Notifications ----
+plyer>=2.1.0                # Cross-platform desktop notifications
+
+# ---- Packaging ----
+pyinstaller>=6.3           # Build a standalone .exe
+
+# ---- Testing ----
+pytest>=7.4

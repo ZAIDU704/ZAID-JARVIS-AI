@@ -1,0 +1,49 @@
+{
+  "app": {
+    "name": "JARVIS AI",
+    "owner": "ZAID BILAL",
+    "version": "1.0.0",
+    "copyright": "\u00a9 2026 ZAID BILAL"
+  },
+  "wake_word": {
+    "phrase": "wake up jarvis",
+    "engine": "openwakeword",
+    "listen_timeout_seconds": 12,
+    "activation_sound": "assets/sounds/activate.wav"
+  },
+  "speech_recognition": {
+    "engine": "vosk",
+    "model_path": "models/vosk-model-small-en-us",
+    "language": "en-us",
+    "energy_threshold": 300
+  },
+  "text_to_speech": {
+    "engine": "pyttsx3",
+    "voice_id": null,
+    "rate": 180,
+    "volume": 1.0
+  },
+  "ui": {
+    "theme": "dark_cyan_glass",
+    "start_minimized": false,
+    "show_waveform": true
+  },
+  "startup": {
+    "run_on_windows_startup": false,
+    "start_in_tray": true
+  },
+  "database": {
+    "path": "database/memory.db"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "jarvis.log",
+    "max_bytes": 1048576,
+    "backup_count": 3
+  },
+  "reminders": {
+    "check_interval_seconds": 30,
+    "desktop_notifications": true,
+    "voice_notifications": true
+  }
+}
